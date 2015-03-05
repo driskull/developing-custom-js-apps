@@ -132,4 +132,16 @@ http://jsonformatter.curiousconcept.com/
 
 Create Group
 
-Create Item
+Create Folder
+
+Create Template Item
+
+Share Template Item to group
+
+Configure Org map to use group
+
+Open Webmap
+
+Share webmap as template
+
+Configure template

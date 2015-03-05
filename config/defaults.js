@@ -22,12 +22,14 @@ define({
   "webmap": "24e01ef45d40423f95300ad2abc5038a",
   "oauthappid": null, //"AFTKRmv16wj14N3z",
 
-  "title": "Farm Fresh",
-  "description": "This heat map shows the concentration of farmers markets across the US. Use the search box to find a market by name.",
-  
+  "title": "",
+  "description": "",
   "enableHomeButton": true,
-  "enableLocateButton": true,
+  "enableLocateButton": false,
   "enableSearch": true,
+  "enableSearchButton": false,
+  "includeEsriLocator": true,
+  "includeMapLayers": true,
 
   //Group templates must support a group url parameter. This will contain the id of the group.
   "group": "",
