@@ -1,0 +1,135 @@
+Steps
+
+1. https://developers.arcgis.com/javascript/jsapi/
+
+JS
+
+  "esri/dijit/Search", "esri/dijit/HomeButton", "esri/dijit/LocateButton",
+
+  Search, HomeButton, LocateButton
+
+HTML 
+  <div id="homebutton"></div>
+  <div id="locatebutton"></div>
+  <div id="search"></div>
+
+CSS 
+  #homebutton {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 36;
+  }
+
+  #locatebutton {
+    position: absolute;
+    top: 142px;
+    left: 20px;
+    z-index: 36;
+  }
+
+  .HomeButton .home,
+  .HomeButton .home:hover,
+  .HomeButton .home:active,
+  .LocateButton .zoomLocateButton,
+  .LocateButton .zoomLocateButton:hover,
+  .LocateButton .zoomLocateButton:active {
+    padding: 1px;
+    background-color: #789aa0;
+    background-color: rgba(120, 154, 160, 0.75);
+  }
+  
+  #search {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    z-index: 36;
+  }
+  
+  
+JS:
+  var hb = new HomeButton({
+    map: this.map
+  }, "homebutton");
+  hb.startup();
+
+  var lb = new LocateButton({
+    map: this.map
+  }, "locatebutton");
+  lb.startup();
+
+  var s = new Search({
+    map: this.map
+  }, "search");
+  s.startup();
+  
+  
+HTML
+  <div class="app-info">
+      <h1 id="title"></h1>
+      <div id="description"></div>
+    </div>
+JS
+  var title = this.config.title || this.config.itemInfo.item.title;
+  var description = this.config.description || this.config.itemInfo.item.description;
+  dom.byId("title").innerHTML = title;
+  dom.byId("description").innerHTML = description;
+  
+CSS
+  .app-info {
+    position: absolute;
+    z-index: 36;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    overflow: auto;
+    padding: 20px;
+    color: #fff;
+    background-color: #789aa0;
+    background-color: rgba(120, 154, 160, 0.75);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+
+http://localhost/developing-custom-js-apps/?webmap=bfbfc02165fd49df90f898a13a14c192
+
+
+"title": "",
+"description":"",
+
+Config:
+"title": "Farm Fresh",
+"description":"This heat map shows the concentration of farmers markets across the US. Use the search box to find a market by name.",
+
+JS:
+  if(this.config.enableHomeButton){
+    var hb = new HomeButton({
+      map: this.map
+    }, "homebutton");
+    hb.startup();
+  }
+
+  if(this.config.enableLocateButton){
+    var lb = new LocateButton({
+      map: this.map
+    }, "locatebutton");
+    lb.startup();
+  }
+
+  if(this.config.enableSearch){
+    var s = new Search({
+      map: this.map
+    }, "search");
+    s.startup();
+  }
+
+http://doc.arcgis.com/en/arcgis-online/create-maps/configurable-templates.htm
+
+
+http://jsonformatter.curiousconcept.com/
+  
+
+Create Group
+
+Create Item
