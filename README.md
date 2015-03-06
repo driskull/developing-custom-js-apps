@@ -29,6 +29,27 @@ Search, HomeButton, LocateButton
   <div id="search"></div>
 ```
 
+## Add widgets to main
+  
+### JavaScript
+
+```javascript
+var hb = new HomeButton({
+  map: this.map
+}, "homebutton");
+hb.startup();
+
+var lb = new LocateButton({
+  map: this.map
+}, "locatebutton");
+lb.startup();
+
+var s = new Search({
+  map: this.map
+}, "search");
+s.startup();
+```
+
 ## Add CSS for widgets
 
 ### CSS
@@ -65,27 +86,6 @@ Search, HomeButton, LocateButton
   left: 80px;
   z-index: 36;
 }
-```
-
-## Add widgets to main
-  
-### JavaScript
-
-```javascript
-var hb = new HomeButton({
-  map: this.map
-}, "homebutton");
-hb.startup();
-
-var lb = new LocateButton({
-  map: this.map
-}, "locatebutton");
-lb.startup();
-
-var s = new Search({
-  map: this.map
-}, "search");
-s.startup();
 ```
 
 ## Add App Information Panel
@@ -134,11 +134,23 @@ dom.byId("description").innerHTML = description;
 "title": "",
 "description":"",
 ```
-### Config
+### Customize Config
 
 ```javascript
 "title": "Farm Fresh",
 "description":"This heat map shows the concentration of farmers markets across the US. Use the search box to find a market by name.",
+```
+
+
+### More Config Properties
+
+```javascript
+"enableHomeButton": true,
+"enableLocateButton": false,
+"enableSearch": true,
+"enableSearchButton": false,
+"includeEsriLocator": true,
+"includeMapLayers": true,
 ```
 
 ### JavaScript
@@ -171,12 +183,6 @@ if(this.config.enableSearch){
   s.startup();
 }
 ```
-  
-  
-## Create Configurable JSON
-
-- [Help Documentation](http://doc.arcgis.com/en/arcgis-online/create-maps/configurable-templates.htm)
-- [JSON Formatter](http://jsonformatter.curiousconcept.com/)
 
 ## Configure Organization
 
@@ -201,16 +207,10 @@ if(this.config.enableSearch){
   ![Configure App](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/configure-app-1.png)
   ![Configure App](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/configure-app-2.png)
   
-## Config options
+## Create Configurable JSON
 
-```javascript
-"enableHomeButton": true,
-"enableLocateButton": false,
-"enableSearch": true,
-"enableSearchButton": false,
-"includeEsriLocator": true,
-"includeMapLayers": true,
-```
+- [Help Documentation](http://doc.arcgis.com/en/arcgis-online/create-maps/configurable-templates.htm)
+- [JSON Formatter](http://jsonformatter.curiousconcept.com/)
 
 ## Configurable JSON
 
