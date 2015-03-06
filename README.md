@@ -126,8 +126,6 @@ dom.byId("description").innerHTML = description;
 }
 ```
 
-http://localhost/developing-custom-js-apps/?webmap=bfbfc02165fd49df90f898a13a14c192
-
 ## Configure App Information
 
 ### Config
