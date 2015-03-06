@@ -182,13 +182,22 @@ if(this.config.enableSearch){
 
 ## Configure Organization
 
-1.  Create Group
+1. Create Group
+  ![1](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/1.png)
 2. Create Folder
+  ![2](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/2.png)
 3. Create Template Item
+  ![3](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/3.png) ![4](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/4.png)
 4. Share Template Item to group
 5. Configure Org map to use group
+  ![5](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/5.png)
+  ![6](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/6.png)
+  ![7](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/7.png)
 6. Open Webmap
 7. Share webmap as template
+  ![8](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/8.png)
+  ![9](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/9.png)
+  ![10](https://raw.githubusercontent.com/driskull/developing-custom-js-apps/master/images/steps/10.png)
 8. Configure template
 
 ## Config options
